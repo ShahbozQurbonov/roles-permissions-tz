@@ -244,7 +244,7 @@ public function assignRole(Request $request, User $user)
  *         required=true,
  *         @OA\JsonContent(
  *             required={"permissions"},
- *             @OA\Property(property="permissions", type="array", @OA\Items(type="string"), example={"edit articles", "delete users"})
+ *             @OA\Property(property="permissions", type="array", @OA\Items(type="string"), example={"create user", "edit user", "delete user", "view user"})
  *         )
  *     ),
 

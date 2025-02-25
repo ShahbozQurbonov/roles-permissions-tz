@@ -307,14 +307,14 @@
                 "tags": [
                     "Users"
                 ],
-                "summary": "Foydalanuvchiga rol(lar) biriktirish",
-                "description": "Berilgan foydalanuvchiga bir yoki bir nechta rollarni biriktiradi.",
+                "summary": "Assign role(s) to a user",
+                "description": "Assign one or more roles to a specified user.",
                 "operationId": "411ce9ba309c5de9a37bc891d4e5f71e",
                 "parameters": [
                     {
                         "name": "user",
                         "in": "path",
-                        "description": "Foydalanuvchi IDsi",
+                        "description": "User ID",
                         "required": true,
                         "schema": {
                             "type": "integer"
@@ -348,7 +348,7 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "Rollar muvaffaqiyatli biriktirildi",
+                        "description": "Roles assigned successfully",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -364,7 +364,7 @@
                         }
                     },
                     "422": {
-                        "description": "Validatsiya xatoliklari",
+                        "description": "Validation errors",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -383,7 +383,7 @@
                         }
                     },
                     "401": {
-                        "description": "Avtorizatsiya xatosi",
+                        "description": "Unauthorized",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -399,7 +399,7 @@
                         }
                     },
                     "403": {
-                        "description": "Ruxsat yo‘q",
+                        "description": "Forbidden",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -427,14 +427,14 @@
                 "tags": [
                     "Users"
                 ],
-                "summary": "Foydalanuvchiga ruxsat(lar) berish",
-                "description": "Berilgan foydalanuvchiga bir yoki bir nechta ruxsatlarni biriktiradi.",
+                "summary": "Assign permissions to a user",
+                "description": "Assign one or more permissions to a specified user.",
                 "operationId": "3fe57e3627b5805e80e78fcaef752eef",
                 "parameters": [
                     {
                         "name": "user",
                         "in": "path",
-                        "description": "Foydalanuvchi IDsi",
+                        "description": "User ID",
                         "required": true,
                         "schema": {
                             "type": "integer"
@@ -456,8 +456,10 @@
                                             "type": "string"
                                         },
                                         "example": [
-                                            "edit articles",
-                                            "delete users"
+                                            "create user",
+                                            "edit user",
+                                            "delete user",
+                                            "view user"
                                         ]
                                     }
                                 },
@@ -468,7 +470,7 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "Ruxsatlar muvaffaqiyatli berildi",
+                        "description": "Permissions assigned successfully",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -484,7 +486,7 @@
                         }
                     },
                     "422": {
-                        "description": "Validatsiya xatoliklari",
+                        "description": "Validation errors",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -503,7 +505,7 @@
                         }
                     },
                     "401": {
-                        "description": "Avtorizatsiya xatosi",
+                        "description": "Unauthorized",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -519,7 +521,7 @@
                         }
                     },
                     "403": {
-                        "description": "Ruxsat yo‘q",
+                        "description": "Forbidden",
                         "content": {
                             "application/json": {
                                 "schema": {
