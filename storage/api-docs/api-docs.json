@@ -12,7 +12,7 @@
                     "Authentication"
                 ],
                 "summary": "User login",
-                "operationId": "222b2625838e3c57e017987f73598fda",
+                "operationId": "99539a8e18179644cbac3165cf994fe5",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -81,7 +81,7 @@
                     "Authentication"
                 ],
                 "summary": "User logout",
-                "operationId": "ad65cbbd4e9f201619eae184a5961a98",
+                "operationId": "84c346b5fbf89662322f7b60466d3011",
                 "responses": {
                     "200": {
                         "description": "Successful logout",
@@ -113,7 +113,7 @@
                     "Users"
                 ],
                 "summary": "Get all users",
-                "operationId": "566aed8efb436ca506e0ef51a032ecd9",
+                "operationId": "1ad1cf4ffbfc84b02284335bdd828008",
                 "responses": {
                     "200": {
                         "description": "List of users",
@@ -122,7 +122,46 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/components/schemas/User"
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            },
+                                            "name": {
+                                                "type": "string",
+                                                "example": "User"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "format": "email",
+                                                "example": "user@gmail.com"
+                                            },
+                                            "roles": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "admin"
+                                                }
+                                            },
+                                            "permissions": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "edit posts"
+                                                }
+                                            },
+                                            "created_at": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2024-02-17T12:34:56Z"
+                                            },
+                                            "updated_at": {
+                                                "type": "string",
+                                                "format": "date-time",
+                                                "example": "2024-02-17T12:34:56Z"
+                                            }
+                                        },
+                                        "type": "object"
                                     }
                                 }
                             }
@@ -140,7 +179,7 @@
                     "Users"
                 ],
                 "summary": "Create a new user",
-                "operationId": "be551c1d694a01c164966f58bfa77013",
+                "operationId": "5b6e72f178a035f354aff3d8b9eeb221",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -190,7 +229,7 @@
                     "Users"
                 ],
                 "summary": "Get a specific user",
-                "operationId": "6f51bd5fa2dddcd25e44cfa53dcbd10a",
+                "operationId": "eeae1fc3107530313912d633e729836f",
                 "parameters": [
                     {
                         "name": "id",
@@ -208,7 +247,46 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/User"
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "User"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "format": "email",
+                                            "example": "user@gmail.com"
+                                        },
+                                        "roles": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "admin"
+                                            }
+                                        },
+                                        "permissions": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "edit posts"
+                                            }
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "example": "2024-02-17T12:34:56Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "example": "2024-02-17T12:34:56Z"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -225,7 +303,7 @@
                     "Users"
                 ],
                 "summary": "Update a user",
-                "operationId": "070e37fc9aff78ae73860751bc990ed3",
+                "operationId": "619663f47b662de2164ec8e364e375ad",
                 "parameters": [
                     {
                         "name": "id",
@@ -278,7 +356,7 @@
                     "Users"
                 ],
                 "summary": "Delete a user",
-                "operationId": "0b4133ed462528a5e648b88ead11e929",
+                "operationId": "7bd824f40b18952d31a49f8e446f806c",
                 "parameters": [
                     {
                         "name": "id",
@@ -309,7 +387,7 @@
                 ],
                 "summary": "Assign role(s) to a user",
                 "description": "Assign one or more roles to a specified user.",
-                "operationId": "411ce9ba309c5de9a37bc891d4e5f71e",
+                "operationId": "1113bc4dd6d78c4ef77695cd37680b04",
                 "parameters": [
                     {
                         "name": "user",
@@ -429,7 +507,7 @@
                 ],
                 "summary": "Assign permissions to a user",
                 "description": "Assign one or more permissions to a specified user.",
-                "operationId": "3fe57e3627b5805e80e78fcaef752eef",
+                "operationId": "9ce72d734f08833c27c1a262096484bb",
                 "parameters": [
                     {
                         "name": "user",
@@ -550,7 +628,7 @@
                     "Users"
                 ],
                 "summary": "Remove a role from a user",
-                "operationId": "494007a294b0ce30f935d5f8e79fee5a",
+                "operationId": "d7152eae3679b14df82f0980d4c73b31",
                 "parameters": [
                     {
                         "name": "id",
@@ -589,7 +667,7 @@
                     "Users"
                 ],
                 "summary": "Revoke a permission from a user",
-                "operationId": "8f9ced8d235226ba3f8eea83e108146d",
+                "operationId": "6af20a0471f0c2083263bed5ef2f8357",
                 "parameters": [
                     {
                         "name": "id",
@@ -624,52 +702,6 @@
         }
     },
     "components": {
-        "schemas": {
-            "User": {
-                "title": "User",
-                "description": "User model schema",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "example": 1
-                    },
-                    "name": {
-                        "type": "string",
-                        "example": "John Doe"
-                    },
-                    "email": {
-                        "type": "string",
-                        "format": "email",
-                        "example": "johndoe@gmail.com"
-                    },
-                    "roles": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "example": "admin"
-                        }
-                    },
-                    "permissions": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "example": "edit posts"
-                        }
-                    },
-                    "created_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "example": "2024-02-17T12:34:56Z"
-                    },
-                    "updated_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "example": "2024-02-17T12:34:56Z"
-                    }
-                },
-                "type": "object"
-            }
-        },
         "securitySchemes": {
             "bearerAuth": {
                 "type": "http",
